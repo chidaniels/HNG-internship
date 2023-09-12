@@ -8,8 +8,8 @@
 </head>
 <body>
     <div class="container">
-        <h1 id="slackUserName" data-testid="slackUserName">Daniel Elizabeth</h1>
         <img src="slack-profile-picture.jpg" alt="Your Slack Username" id="slackDisplayImage" data-testid="slackDisplayImage">
+        <h1 id="slackUserName" data-testid="slackUserName">Daniel Elizabeth</h1>
         <p id="currentDayOfTheWeek" data-testid="currentDayOfTheWeek">Tuesday</p>
         <p id="currentUTCTime" data-testid="currentUTCTime"></p>
         <p id="myTrack" data-testid="myTrack">Frontend</p>
@@ -18,15 +18,19 @@
 
 
     <script>
-         function setUTCTime() {
+        function updateUTCTime() {
             const utcTimeElement = document.getElementById('currentUTCTime');
-            const currentUTCTime = new Date().getTime(); 
-            utcTimeElement.textContent = currentUTCTime;
+            const currentUTCTimeMillis = new Date().getTime();
+            utcTimeElement.textContent = currentUTCTimeMillis + ' milliseconds';
         }
-
-        setUTCTime();
+    
+        // Update the UTC time every second
+        setInterval(updateUTCTime, 1000);
+    
+        // Initial call to set the UTC time
+        updateUTCTime();
     </script>
-</body>
+    </body>
 </html>
 
 
