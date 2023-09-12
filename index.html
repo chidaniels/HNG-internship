@@ -8,18 +8,18 @@
 </head>
 <body>
     <div class="container">
-        <h1 id="slackUserName" data-testid="slackUserName">Slack Username: Daniel Elizabeth</h1>
+        <h1 id="slackUserName" data-testid="slackUserName">Daniel Elizabeth</h1>
         <img src="slack-profile-picture.jpg" alt="Your Slack Username" id="slackDisplayImage" data-testid="slackDisplayImage">
-        <p id="currentDayOfTheWeek" data-testid="currentDayOfTheWeek">Day of the week: Tuesday</p>
-        <p id="currentUTCTime" data-testid="currentUTCTime">Current UTC Time:  <span id="utcTimeValue" data-testid="utcTimeValue">Loading...</span></p>
-        <p id="myTrack" data-testid="myTrack">Track: Frontend</p>
-        <a href="https://github.com/chidaniels/HNG-internship" id="githubURL" data-testid="githubURL">Project URL:Visit My Project GitHub url</a>
+        <p id="currentDayOfTheWeek" data-testid="currentDayOfTheWeek">Tuesday</p>
+        <p id="currentUTCTime" data-testid="currentUTCTime"></p>
+        <p id="myTrack" data-testid="myTrack">Frontend</p>
+        <a href="https://github.com/chidaniels/HNG-internship" id="githubURL" data-testid="githubURL">My GitHub url</a>
     </div>
 
 
     <script>
          function setUTCTime() {
-            const utcTimeElement = document.getElementById('utcTimeValue');
+            const utcTimeElement = document.getElementById('currentUTCTime');
             const currentUTCTime = new Date().getTime(); 
             utcTimeElement.textContent = currentUTCTime;
         }
